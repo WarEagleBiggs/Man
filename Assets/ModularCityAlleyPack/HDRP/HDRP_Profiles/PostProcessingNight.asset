@@ -16,6 +16,9 @@ MonoBehaviour:
   mode:
     m_OverrideState: 1
     m_Value: 2
+  useFullACES:
+    m_OverrideState: 0
+    m_Value: 0
   toeStrength:
     m_OverrideState: 0
     m_Value: 0
@@ -40,6 +43,33 @@ MonoBehaviour:
   lutContribution:
     m_OverrideState: 0
     m_Value: 1
+  neutralHDRRangeReductionMode:
+    m_OverrideState: 0
+    m_Value: 2
+  acesPreset:
+    m_OverrideState: 0
+    m_Value: 3
+  fallbackMode:
+    m_OverrideState: 0
+    m_Value: 1
+  hueShiftAmount:
+    m_OverrideState: 0
+    m_Value: 0
+  detectPaperWhite:
+    m_OverrideState: 0
+    m_Value: 0
+  paperWhite:
+    m_OverrideState: 0
+    m_Value: 300
+  detectBrightnessLimits:
+    m_OverrideState: 0
+    m_Value: 1
+  minNits:
+    m_OverrideState: 0
+    m_Value: 0.005
+  maxNits:
+    m_OverrideState: 0
+    m_Value: 1000
 --- !u!114 &-2128593007338810424
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -136,6 +166,27 @@ MonoBehaviour:
   accumulationFactor:
     m_OverrideState: 0
     m_Value: 0.75
+  biasFactor:
+    m_OverrideState: 0
+    m_Value: 0.5
+  speedRejectionParam:
+    m_OverrideState: 0
+    m_Value: 0.5
+  speedRejectionScalerFactor:
+    m_OverrideState: 0
+    m_Value: 0.2
+  speedSmoothReject:
+    m_OverrideState: 0
+    m_Value: 0
+  speedSurfaceOnly:
+    m_OverrideState: 0
+    m_Value: 1
+  speedTargetOnly:
+    m_OverrideState: 0
+    m_Value: 1
+  enableWorldSpeedRejection:
+    m_OverrideState: 0
+    m_Value: 0
   m_RayMaxIterations:
     m_OverrideState: 1
     m_Value: 32
@@ -232,7 +283,7 @@ MonoBehaviour:
     m_Value: 1
   fixedExposure:
     m_OverrideState: 1
-    m_Value: 0.15126058
+    m_Value: -0.75630236
   compensation:
     m_OverrideState: 1
     m_Value: 0
@@ -489,7 +540,7 @@ MonoBehaviour:
     m_Value: 0.9
   intensity:
     m_OverrideState: 1
-    m_Value: 0.67
+    m_Value: 0.89
   scatter:
     m_OverrideState: 1
     m_Value: 0.5
