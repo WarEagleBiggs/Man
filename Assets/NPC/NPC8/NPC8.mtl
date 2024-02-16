@@ -1,0 +1,74 @@
+# Exported from Fuse 1.3.0
+
+newmtl Shoes
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd NPC8_Shoes_diffuse.png
+map_Ks NPC8_Shoes_specular.png
+bump NPC8_Shoes_normal.png
+map_Ns NPC8_Shoes_gloss.png
+
+newmtl Top
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd NPC8_Top_diffuse.png
+map_Ks NPC8_Top_specular.png
+bump NPC8_Top_normal.png
+map_Ns NPC8_Top_gloss.png
+
+newmtl Hair
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd NPC8_Hair_diffuse.png
+map_Ks NPC8_Hair_specular.png
+bump NPC8_Hair_normal.png
+map_Ns NPC8_Hair_gloss.png
+
+newmtl Beard
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd NPC8_Beard_diffuse.png
+map_Ks NPC8_Beard_specular.png
+bump NPC8_Beard_normal.png
+map_Ns NPC8_Beard_gloss.png
+
+newmtl Body
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd NPC8_Body_diffuse.png
+map_Ks NPC8_Body_specular.png
+bump NPC8_Body_normal.png
+map_Ns NPC8_Body_gloss.png
+
+newmtl Bottom
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd NPC8_Bottom_diffuse.png
+map_Ks NPC8_Bottom_specular.png
+bump NPC8_Bottom_normal.png
+map_Ns NPC8_Bottom_gloss.png
+
