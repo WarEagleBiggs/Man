@@ -22,7 +22,7 @@ public class Man : MonoBehaviour
             Wander();
         }
 
-        agent.SetDestination(PlayerPos.position);
+        
 
     }
 
@@ -33,7 +33,7 @@ public class Man : MonoBehaviour
         {
             Wander();
         }
-        
+        agent.SetDestination(PlayerPos.position);
     }
 
     public void Wander()
