@@ -29,11 +29,24 @@ public class Man : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(agent.remainingDistance < 0.1f && isChase == false)
+        if (isChase)
         {
-            Wander();
+            agent.SetDestination(PlayerPos.position);
         }
-        agent.SetDestination(PlayerPos.position);
+        if(agent.remainingDistance < 0.1f)
+        {
+            int randomNum = Random.Range(0, 2);
+            if (randomNum == 0)
+            {
+                StartCoroutine(Chase());
+            }
+            else
+            {
+                Wander();
+            }
+            
+        }
+        
     }
 
     public void Wander()
@@ -53,5 +66,12 @@ public class Man : MonoBehaviour
         }
 
         agent.SetDestination(finalPosition);
+    }
+
+    public IEnumerator Chase()
+    {
+        isChase = true;
+        yield return new WaitForSeconds(Random.Range(2,30));
+        isChase = false;
     }
 }
