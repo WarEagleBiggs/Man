@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
                 
             }
             
+            HUD.SetActive(!HUD.activeSelf);
             Pause.SetActive(!Pause.activeSelf);
             SPC.enabled = !SPC.isActiveAndEnabled;
             Man.SetActive(!Man.activeSelf);

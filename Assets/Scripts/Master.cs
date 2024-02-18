@@ -11,17 +11,31 @@ public class Master : MonoBehaviour
     public bool isEscape;
     public bool isChase;
 
+    public TextMeshProUGUI SectionTxt;
+    
+    public List<GameObject> Images;
+    public int currImage;
+
     public TextMeshProUGUI countTxt;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         countTxt.SetText(NotesCollected + "/20");
+    }
+
+    public void leftImage()
+    {
+        Images[currImage].SetActive(false);
+        currImage--;
+        Images[currImage].SetActive(true);
+
+    }
+    public void rightImage()
+    {
+        Images[currImage].SetActive(false);
+        currImage++;
+        Images[currImage].SetActive(true);
+
     }
 }
