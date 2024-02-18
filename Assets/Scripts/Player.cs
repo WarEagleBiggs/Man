@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public GameObject Prompt;
-    
+    public Master MasterScript;
     void Update()
     {
         RaycastHit hit;
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     //hit
-                    
+                    MasterScript.NotesCollected++;
                     hit.transform.gameObject.SetActive(false);
                 }
                 

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Master : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class Master : MonoBehaviour
     public int NotesCollected;
     public bool isEscape;
     public bool isChase;
+
+    public TextMeshProUGUI countTxt;
     
     // Start is called before the first frame update
     void Start()
@@ -18,6 +22,6 @@ public class Master : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        countTxt.SetText(NotesCollected + "/20");
     }
 }
