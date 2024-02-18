@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
+using UnityEngine.SceneManagement;
 using Slider = UnityEngine.UIElements.Slider;
 
 public class Master : MonoBehaviour
@@ -33,6 +34,11 @@ public class Master : MonoBehaviour
     public UnityEngine.UI.Slider slider;
     private ColorAdjustments colo;
 
+    public GameObject LoseScreen;
+    public GameObject WinScreen;
+
+    public SimplePlayerController Player;
+
     public void UpdateBrigh()
     {
         if (slider == null)
@@ -60,8 +66,28 @@ public class Master : MonoBehaviour
         }
     }
 
+    public void Reload()
+    {
+        SceneManager.LoadScene("Page");
+        
+    }
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+        
+    }
+
     void Update()
     {
+
+        if (Player.Health <= 0)
+        {
+            LoseScreen.SetActive(true);
+            Player.enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        
         countTxt.SetText(NotesCollected + "/20");
 
         if (currSection == 0)

@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Cursor = UnityEngine.Cursor;
@@ -16,6 +18,9 @@ public class SimplePlayerController : MonoBehaviour
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
     public float gravity = 150.0f;
+    public int Health = 100;
+
+    public TextMeshProUGUI healthTxt;
     
 
     CharacterController characterController;
@@ -41,6 +46,9 @@ public class SimplePlayerController : MonoBehaviour
 
     void Update()
     {
+        healthTxt.SetText("Health: " +Health.ToString());
+        
+        
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
@@ -64,4 +72,5 @@ public class SimplePlayerController : MonoBehaviour
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
     }
+    
 }

@@ -86,6 +86,10 @@ public class Man : MonoBehaviour
             //Teleport
             int ran = Random.Range(0, MasterScript.Manholes.Count);
             gameObject.transform.position = MasterScript.Manholes[ran].gameObject.transform.position;
+        } else if (other.tag == "Player")
+        {
+            SimplePlayerController con = other.GetComponent<SimplePlayerController>();
+            con.Health = con.Health - 25;
         }
     }
 }

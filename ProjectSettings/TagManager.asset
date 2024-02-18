@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Manhole
   - Sheet
+  - Man
   layers:
   - Default
   - TransparentFX
