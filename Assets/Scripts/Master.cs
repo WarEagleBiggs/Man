@@ -80,6 +80,15 @@ public class Master : MonoBehaviour
     void Update()
     {
 
+        if (NotesCollected >= 20)
+        {
+            //win
+            WinScreen.SetActive(true);
+            Player.enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
         if (Player.Health <= 0)
         {
             LoseScreen.SetActive(true);
