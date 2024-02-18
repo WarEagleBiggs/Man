@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class Man : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class Man : MonoBehaviour
 
     public Transform PlayerPos;
     public bool isChase;
+
+    public Master MasterScript;
     
     // Start is called before the first frame update
     void Start()
@@ -73,5 +77,15 @@ public class Man : MonoBehaviour
         isChase = true;
         yield return new WaitForSeconds(Random.Range(2,30));
         isChase = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Manhole")
+        {
+            //Teleport
+            int ran = Random.Range(0, MasterScript.Manholes.Count);
+            gameObject.transform.position = MasterScript.Manholes[ran].gameObject.transform.position;
+        }
     }
 }
