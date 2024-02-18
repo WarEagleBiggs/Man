@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     {
         RaycastHit hit;
         
-        if (Physics.Raycast(transform.position, transform.forward, out hit))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 5f))
         {
             if (hit.collider.CompareTag("Sheet"))
             {
