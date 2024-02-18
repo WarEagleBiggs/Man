@@ -1,22 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
+using Slider = UnityEngine.UI.Slider;
 
 [RequireComponent(typeof(CharacterController))]
 
 public class SimplePlayerController : MonoBehaviour
 {
+    public Slider slider;
     public Camera playerCamera;
     public float walkSpeed = 1.15f;
     public float runSpeed = 4.0f;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
     public float gravity = 150.0f;
+    
 
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
     private bool canMove = true;
+
+    
 
     void Start()
     {
@@ -25,6 +32,11 @@ public class SimplePlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+    }
+
+    public void updateSlider()
+    {
+        lookSpeed = slider.value;
     }
 
     void Update()
