@@ -12,6 +12,8 @@ public class Master : MonoBehaviour
     public bool isChase;
 
     public TextMeshProUGUI SectionTxt;
+    public List<string> SectionWordings;
+    public int currSection;
     
     public List<GameObject> Images;
     public int currImage;
@@ -26,16 +28,54 @@ public class Master : MonoBehaviour
 
     public void leftImage()
     {
-        Images[currImage].SetActive(false);
-        currImage--;
-        Images[currImage].SetActive(true);
+        if (currImage == 0)
+        {
+            Images[currImage].SetActive(false);
+            currImage = Images.Count - 1;
+            Images[currImage].SetActive(true);
+        }
+        else
+        {
+            Images[currImage].SetActive(false);
+            currImage--;
+            Images[currImage].SetActive(true);
+        }
+        
 
     }
     public void rightImage()
     {
-        Images[currImage].SetActive(false);
-        currImage++;
-        Images[currImage].SetActive(true);
+        if (currImage == Images.Count - 1)
+        {
+            Images[currImage].SetActive(false);
+            currImage = 0;
+            Images[currImage].SetActive(true);
+        }
+        else
+        {
+            Images[currImage].SetActive(false);
+            currImage++;
+            Images[currImage].SetActive(true);
+        }
+
+    }
+    
+    public void leftSection()
+    {
+        if (currSection == 0)
+        {
+            
+            currSection = SectionWordings.Count - 1;
+            SectionTxt.SetText(SectionWordings[currSection]);
+            
+        }
+        else
+        {
+            
+            currSection--;
+            SectionTxt.SetText(SectionWordings[currSection]);
+        }
+        
 
     }
 }
