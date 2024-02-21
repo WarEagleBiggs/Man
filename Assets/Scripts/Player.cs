@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using FullscreenEditor;
+//using FullscreenEditor;
 using UnityEngine;
 
 public class Player : MonoBehaviour
