@@ -80,6 +80,11 @@ public class Master : MonoBehaviour
         
     }
 
+    public void quit()
+    {
+        Application.Quit();
+    }
+
     void Update()
     {
         
@@ -107,22 +112,14 @@ public class Master : MonoBehaviour
         if (currSection == 0)
         {
             //pages
-            PagesUI.SetActive(true);
-            SettingsUI.SetActive(false);
-            ArchiveUI.SetActive(false);
+            PagesUI.SetActive(false);
+            SettingsUI.SetActive(true);
         } else if (currSection == 1)
         {
             //settings
-            SettingsUI.SetActive(true);
-            PagesUI.SetActive(false);
-            ArchiveUI.SetActive(false);
-        } else if (currSection == 2)
-        {
-            //archive
-            ArchiveUI.SetActive(true);
-            PagesUI.SetActive(false);
             SettingsUI.SetActive(false);
-        }
+            PagesUI.SetActive(true);
+        } 
     }
 
     public void leftImage()
