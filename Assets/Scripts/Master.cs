@@ -20,6 +20,7 @@ public class Master : MonoBehaviour
     public int currSection;
     
     public List<GameObject> Images;
+    public List<GameObject> ImageFilters;
     public int currImage;
 
     public TextMeshProUGUI countTxt;
@@ -38,6 +39,8 @@ public class Master : MonoBehaviour
     public GameObject WinScreen;
 
     public SimplePlayerController Player;
+
+    public TextMeshProUGUI currPageTxt;
 
     public void UpdateBrigh()
     {
@@ -79,6 +82,8 @@ public class Master : MonoBehaviour
 
     void Update()
     {
+        
+        currPageTxt.SetText((currImage + 1).ToString());
 
         if (NotesCollected >= 20)
         {

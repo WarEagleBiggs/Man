@@ -27,7 +27,9 @@ public class Player : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     //hit
+                    MasterScript.ImageFilters[MasterScript.NotesCollected].SetActive(false);
                     MasterScript.NotesCollected++;
+                    
                     hit.transform.gameObject.SetActive(false);
                 }
                 
